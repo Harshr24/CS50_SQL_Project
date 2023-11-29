@@ -4,5 +4,4 @@ SELECT * FROM addresses WHERE id IN (SELECT address_id FROM scans WHERE package_
 -- *** The Devious Delivery ***
 SELECT * FROM (SELECT * FROM (SELECT * FROM scans WHERE package_id IN (SELECT id FROM packages WHERE from_address_id IS NULL) AND action='Drop') AS scans_result JOIN (SELECT * FROM packages WHERE from_address_id IS NULL) AS packages_result ON scans_result.package_id = packages_result.id) AS sp JOIN (SELECT * FROM addresses WHERE id = (SELECT address_id FROM scans WHERE package_id = (SELECT id FROM packages WHERE from_address_id IS NULL) AND action='Drop')) AS a ON sp.address_id = a.id;
 -- *** The Forgotten Gift ***
-SELECT * FROM packages WHERE from_address_id = (SELECT id FROM addresses WHERE address = '109 Tileston Street');
-SELECT name FROM drivers WHERE id = (SELECT driver_id FROM scans WHERE package_id = (SELECT id FROM packages WHERE from_address_id = (SELECT id FROM addresses WHERE address = '109 Tileston Street'))ORDER BY timestamp DESC LIMIT 1);
+SELECT * FROM packages WHERE from_address_id = (SELECT id FROM addresses WHERE address = '109 Tileston Street') UNION SELECT name FROM drivers WHERE id = (SELECT driver_id FROM scans WHERE package_id = (SELECT id FROM packages WHERE from_address_id = (SELECT id FROM addresses WHERE address = '109 Tileston Street'))ORDER BY timestamp DESC LIMIT 1);
