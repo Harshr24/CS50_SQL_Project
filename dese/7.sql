@@ -1,1 +1,1 @@
-SELECT s.name FROM schools s INNER JOIN graduation_rates g ON s.id = g.school_id WHERE g.graduated = 100;
+SELECT s.name FROM schools s INNER JOIN districs d ON s.id = g.school_id WHERE d.type = 'Cambridge school district';
