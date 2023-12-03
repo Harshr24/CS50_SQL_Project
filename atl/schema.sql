@@ -2,33 +2,13 @@
 CREATE TABLE Passengers (ID INTEGER PRIMARY KEY AUTOINCREMENT, FirstName TEXT NOT NULL, LastName TEXT NOT NULL, Age INTEGER NOT NULL);
 
 -- Creating Airlines table
-CREATE TABLE Airlines (
-    ID INTEGER PRIMARY KEY AUTOINCREMENT,
-    Name TEXT NOT NULL,
-    Concourse TEXT NOT NULL
-);
+CREATE TABLE Airlines (ID INTEGER PRIMARY KEY AUTOINCREMENT, Name TEXT NOT NULL, Concourse TEXT NOT NULL);
 
 -- Creating Flights table
-CREATE TABLE Flights (
-    ID INTEGER PRIMARY KEY AUTOINCREMENT,
-    FlightNumber TEXT NOT NULL,
-    AirlineID INTEGER NOT NULL,
-    DepartureAirportCode TEXT NOT NULL,
-    ArrivalAirportCode TEXT NOT NULL,
-    ExpectedDepartureDateTime TEXT NOT NULL,
-    ExpectedArrivalDateTime TEXT NOT NULL,
-    FOREIGN KEY (AirlineID) REFERENCES Airlines (ID)
-);
+CREATE TABLE Flights (ID INTEGER PRIMARY KEY AUTOINCREMENT, FlightNumber TEXT NOT NULL, AirlineID INTEGER NOT NULL, DepartureAirportCode TEXT NOT NULL, ArrivalAirportCode TEXT NOT NULL, ExpectedDepartureDateTime TEXT NOT NULL, ExpectedArrivalDateTime TEXT NOT NULL, FOREIGN KEY (AirlineID) REFERENCES Airlines (ID));
 
 -- Creating CheckIns table
-CREATE TABLE CheckIns (
-    ID INTEGER PRIMARY KEY AUTOINCREMENT,
-    PassengerID INTEGER NOT NULL,
-    FlightID INTEGER NOT NULL,
-    CheckInDateTime TEXT NOT NULL,
-    FOREIGN KEY (PassengerID) REFERENCES Passengers (ID),
-    FOREIGN KEY (FlightID) REFERENCES Flights (ID)
-);
+CREATE TABLE CheckIns (ID INTEGER PRIMARY KEY AUTOINCREMENT, PassengerID INTEGER NOT NULL, FlightID INTEGER NOT NULL, CheckInDateTime TEXT NOT NULL, FOREIGN KEY (PassengerID) REFERENCES Passengers (ID), FOREIGN KEY (FlightID) REFERENCES Flights (ID));
 
 -- Inserting sample data
 BEGIN TRANSACTION;
