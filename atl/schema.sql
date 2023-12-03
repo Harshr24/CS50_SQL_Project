@@ -24,10 +24,8 @@ INSERT INTO Airlines (Name, Concourse) VALUES ('Delta', 'T');
 INSERT INTO Passengers (FirstName, LastName, Age) VALUES ('Amelia', 'Earhart', 39);
 
 -- Inserting flights
-INSERT INTO Flights (FlightNumber, AirlineID, DepartureAirportCode, ArrivalAirportCode, ExpectedDepartureDateTime, ExpectedArrivalDateTime)
-VALUES ('300', 1, 'ATL', 'BOS', '2023-08-03 18:46:00', '2023-08-03 21:09:00');
+INSERT INTO Flights (FlightNumber, AirlineID, DepartureAirportCode, ArrivalAirportCode, ExpectedDepartureDateTime, ExpectedArrivalDateTime) VALUES ('300', 1, 'ATL', 'BOS', '2023-08-03 18:46:00', '2023-08-03 21:09:00');
 
 -- Inserting check-ins
 INSERT INTO CheckIns (PassengerID, FlightID, CheckInDateTime) VALUES (1, 1, '2023-08-03 15:03:00');
-
 COMMIT;
