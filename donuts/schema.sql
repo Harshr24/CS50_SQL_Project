@@ -7,7 +7,7 @@ CREATE TABLE Order_Donuts (order_id INTEGER NOT NULL, donut_id INTEGER NOT NULL,
 
 INSERT INTO Ingredients (name, price_per_unit) VALUES ('Cocoa', 5.00), ('Sugar', 2.00);
 INSERT INTO Donuts (name, gluten_free, price) VALUES ('Belgian Dark Chocolate', 0, 4.00), ('Back-To-School Sprinkles', 0, 4.00);
-INSERT INTO Donut_Ingredients (donut_id, ingredient_id, amount) VALUES (1, 1, 2.0), (1, 2, 4.0), (1, 3, 0.5), (2, 1, 2.0), (2, 2, 4.0), (2, 4, 2.0);
+INSERT INTO Donut_Ingredients (donut_id, ingredient_id, amount) VALUES (1, 1, 2.0), (1, 2, 4.0), (1, 3, 0.5), (2, 1, 2.0), (2, 2, 4.0), (2, 3, 2.0);
 INSERT INTO Customers (first_name, last_name) VALUES ('Luis', 'Singh');
 INSERT INTO Orders (customer_id, order_number) VALUES (1, 1);
 INSERT INTO Order_Donuts (order_id, donut_id, quantity) VALUES (1, 1, 3), (1, 2, 2);
