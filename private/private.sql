@@ -1,4 +1,5 @@
-CREATE VIEW IF NOT EXISTS "message" AS
+DROP VIEW IF EXISTS "message";
+CREATE VIEW "message" AS
 SELECT substr(sentence, 2, 4) AS phrase FROM sentences WHERE id = 14
 UNION SELECT substr(sentence, 98, 3) AS phrase FROM sentences WHERE id = 98
 UNION SELECT substr(sentence, 4, 5) AS phrase FROM sentences WHERE id = 4
