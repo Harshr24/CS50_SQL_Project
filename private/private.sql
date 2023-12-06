@@ -1,5 +1,5 @@
-CREATE TABLE triplets (sentence_id INTEGER, START_CHAR);
-
+CREATE TABLE triplets (sentence_id INTEGER, start_char INTEGER, length INTEGER);
+INSERT INTO triplets (sentence_id, start_char, length) VALUES ()
 
 DROP VIEW IF EXISTS "message";
 CREATE VIEW "message" AS
