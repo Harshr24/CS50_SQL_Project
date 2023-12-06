@@ -1,3 +1,6 @@
+CREATE TABLE triplets (sentence_id INTEGER, START_CHAR);
+
+
 DROP VIEW IF EXISTS "message";
 CREATE VIEW "message" AS
 SELECT trim(substr(sentence, 2, 4)) AS phrase FROM sentences WHERE id = 14
