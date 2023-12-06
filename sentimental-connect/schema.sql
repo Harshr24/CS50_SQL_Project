@@ -19,14 +19,7 @@ CREATE TABLE UserCompanyConnections (user_company_id INT AUTO_INCREMENT PRIMARY 
 
 -- Sample Data Insertion
 INSERT INTO Users (first_name, last_name, username, password) VALUES ('Claudine', 'Gay', 'claudine', 'password'), ('Reid', 'Hoffman', 'reid', 'password');
-
 INSERT INTO Schools (name, school_type, location, founded_year) VALUES ('Harvard University', 'Higher Education', 'Cambridge, Massachusetts', 1636);
-
-INSERT INTO Companies (name, industry, location) VALUES
-    ('LinkedIn', 'Technology', 'Sunnyvale, California');
-
-INSERT INTO UserSchoolConnections (user_id, school_id, start_date, end_date, degree_type) VALUES
-    (1, 1, '1993-01-01', '1998-12-31', 'PhD');
-
-INSERT INTO UserCompanyConnections (user_id, company_id, title, start_date, end_date) VALUES
-    (2, 1, 'CEO and Chairman', '2003-01-01', '2007-02-01');
+INSERT INTO Companies (name, industry, location) VALUES ('LinkedIn', 'Technology', 'Sunnyvale, California');
+INSERT INTO UserSchoolConnections (user_id, school_id, start_date, end_date, degree_type) VALUES (1, 1, '1993-01-01', '1998-12-31', 'PhD');
+INSERT INTO UserCompanyConnections (user_id, company_id, title, start_date, end_date) VALUES (2, 1, 'CEO and Chairman', '2003-01-01', '2007-02-01');
