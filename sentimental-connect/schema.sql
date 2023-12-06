@@ -1,7 +1,3 @@
--- Create LinkedIn database
-CREATE DATABASE IF NOT EXISTS linkedin_db;
-USE linkedin_db;
-
 -- Table for Users
 CREATE TABLE Users (user_id INT AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(50) NOT NULL, last_name VARCHAR(50) NOT NULL, username VARCHAR(50) UNIQUE NOT NULL, password VARCHAR(128) NOT NULL -- Assuming hashed passwords of up to 128 characters);
 
