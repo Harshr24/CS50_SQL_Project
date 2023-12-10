@@ -2,20 +2,29 @@
 
 By YOUR NAME HERE
 
-Video overview: <URL HERE>
+Video overview: [Insert URL Here]
 
 ## Scope
 
-The database includes entities such as Patients, Doctors, Appointments, Medical Records, and Departments. It facilitates the recording and retrieval of patient information, appointment scheduling, and the management of medical staff within different departments.
+The database encompasses entities critical for managing hospital operations, including Patients, Doctors, Appointments, Medical Records, and Departments. It facilitates patient information storage, appointment scheduling, and medical staff management within various departments.
 
-The database is not intended to handle financial transactions or laboratory results, which are managed by separate systems.
+The database does not handle financial transactions or laboratory results, as these are managed by separate systems.
 
 ## Functional Requirements
 
-In this section you should answer the following questions:
+### What a User Should be Able to Do
 
-* What should a user be able to do with your database?
-* What's beyond the scope of what a user should be able to do with your database?
+Users should be able to:
+- Register/update patient details.
+- Schedule, update, and cancel appointments for patients with doctors.
+- Record and update medical diagnoses and prescriptions.
+- Manage and assign doctors to different departments.
+
+### Beyond Scope
+
+The database does not handle:
+- Financial transactions (handled by the finance system).
+- Laboratory results and tests (managed by a dedicated laboratory system).
 
 ## Representation
 
