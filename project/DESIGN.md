@@ -6,11 +6,9 @@ Video overview: <URL HERE>
 
 ## Scope
 
-In this section you should answer the following questions:
+The database includes entities such as Patients, Doctors, Appointments, Medical Records, and Departments. It facilitates the recording and retrieval of patient information, appointment scheduling, and the management of medical staff within different departments.
 
-* What is the purpose of your database?
-* Which people, places, things, etc. are you including in the scope of your database?
-* Which people, places, things, etc. are *outside* the scope of your database?
+The database is not intended to handle financial transactions or laboratory results, which are managed by separate systems.
 
 ## Functional Requirements
 
