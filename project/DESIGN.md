@@ -7,7 +7,6 @@ Video overview: [Insert URL Here]
 ## Scope
 
 The database encompasses entities critical for managing hospital operations, including Patients, Doctors, Appointments, Medical Records, and Departments. It facilitates patient information storage, appointment scheduling, and medical staff management within various departments.
-
 The database does not handle financial transactions or laboratory results, as these are managed by separate systems.
 
 ## Functional Requirements
@@ -30,7 +29,7 @@ The database does not handle:
 
 The hospital management system includes the following entities:
 
-Patients
+### Patients
 The patients table comprises essential patient information:
 
 patient_id: Unique ID for the patient, defined as INTEGER and designated as the PRIMARY KEY.
@@ -38,7 +37,8 @@ name: Text field (TEXT) storing the patient's name.
 age: Integer field storing the patient's age.
 gender: Text field to denote the patient's gender.
 contact_number: Text field for the patient's contact number.
-Doctors
+
+### Doctors
 The doctors table stores pertinent details about the hospital's medical staff:
 
 doctor_id: Unique identifier for doctors, an INTEGER with PRIMARY KEY constraint.
@@ -47,7 +47,7 @@ specialization: Text field indicating the doctor's area of expertise or speciali
 contact_number: Text field to store the doctor's contact number.
 All columns in the doctors table are mandatory, necessitating the NOT NULL constraint to ensure completeness.
 
-Appointments
+### Appointments
 The appointments table manages scheduled appointments between patients and doctors:
 
 appointment_id: Unique identifier for appointments, defined as an INTEGER with the PRIMARY KEY constraint.
@@ -55,7 +55,8 @@ patient_id: Foreign key linking to the patients table's patient_id to ensure dat
 doctor_id: Foreign key linking to the doctors table's doctor_id to maintain consistency.
 appointment_date: Date and time for the appointment.
 purpose: Text field specifying the reason or purpose of the appointment.
-Medical Records
+
+### Medical Records
 The medical_records table stores medical history and records:
 
 record_id: Unique identifier for medical records, an INTEGER with PRIMARY KEY constraint.
@@ -63,7 +64,8 @@ patient_id: Foreign key connecting to the patients table's patient_id to associa
 doctor_id: Foreign key linking to the doctors table's doctor_id to identify the attending physician.
 diagnosis: Text field detailing the diagnosis or medical condition.
 prescription: Text field containing the prescribed treatment or medication.
-Departments
+
+### Departments
 The departments table manages different hospital departments:
 
 department_id: Unique identifier for departments, defined as an INTEGER with PRIMARY KEY constraint.
