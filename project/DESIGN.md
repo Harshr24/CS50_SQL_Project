@@ -76,7 +76,7 @@ location: Text field specifying the department's physical location within the ho
 
 The Entity Relationship Diagram (ERD) illustrating relationships between entities:
 
-![Entity Relationship Diagram](C:\Users\HARSH RAI\Pictures\Screenshots\Screenshot 2023-12-10 123359.png)
+![Entity Relationship Diagram](C:\Users\HARSH RAI\Pictures\Screenshots\Project.png)
 
 Explanation of relationships:
 - Each patient can have multiple medical records and appointments.
