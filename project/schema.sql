@@ -44,3 +44,16 @@ CREATE TABLE departments (
     name TEXT NOT NULL,
     location TEXT
 );
+
+-- Create an index to speed up searches on the patients' names
+CREATE INDEX idx_patients_name ON patients (name);
+
+-- Create an index to enhance searches based on doctors' specialization
+CREATE INDEX idx_doctors_specialization ON doctors (specialization);
+
+-- Create a view to display patient appointments with associated doctors' details
+CREATE VIEW patient_appointments AS
+SELECT a.appointment_id, p.name AS patient_name, d.name AS doctor_name, a.appointment_date
+FROM appointments a
+JOIN patients p ON a.patient_id = p.patient_id
+JOIN doctors d ON a.doctor_id = d.doctor_id;
