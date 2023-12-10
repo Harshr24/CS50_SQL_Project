@@ -50,13 +50,12 @@ Explanation of relationships:
 
 ## Optimizations
 
-In this section you should answer the following questions:
-
-* Which optimizations (e.g., indexes, views) did you create? Why?
+We implemented the following optimizations:
+- Indexes on frequently queried columns like `name` in Patients and Doctors tables for faster search.
+- Partitioning of Medical Records based on date ranges to enhance search efficiency.
 
 ## Limitations
 
-In this section you should answer the following questions:
-
-* What are the limitations of your design?
-* What might your database not be able to represent very well?
+The limitations of our design include:
+- Lack of support for financial transactions and laboratory result management.
+- Potential complexity in handling collaborative treatments requiring multiple doctors' involvement.
