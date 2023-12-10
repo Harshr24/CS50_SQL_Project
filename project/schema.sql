@@ -1,9 +1,9 @@
 -- In this SQL file, write (and comment!) the schema of your database, including the CREATE TABLE, CREATE INDEX, CREATE VIEW, etc. statements that compose it
 -- Table: patients
-CREATE TABLE "patients" ("patient_id" INTEGER PRIMARY KEY, "name" TEXT NOT NULL, "age" INTEGER, "gender" TEXT "contact_number" TEXT);
+CREATE TABLE patients (patient_id INTEGER PRIMARY KEY, name TEXT NOT NULL, age INTEGER, gender TEXT, contact_number TEXT);
 
 -- Table: doctors
-CREATE TABLE doctors(doctor_id INTEGER PRIMARY KEY, name TEXT NOT NULL, specialization TEXT, contact_number TEXT);
+CREATE TABLE doctors (doctor_id INTEGER PRIMARY KEY, name TEXT NOT NULL, specialization TEXT, contact_number TEXT);
 
 -- Table: appointments
 CREATE TABLE appointments (
