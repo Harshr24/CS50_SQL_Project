@@ -26,20 +26,27 @@ The database does not handle:
 - Financial transactions (handled by the finance system).
 - Laboratory results and tests (managed by a dedicated laboratory system).
 
-## Representation
-
 ### Entities
 
-In this section you should answer the following questions:
+The chosen entities for representation in the database are:
 
-* Which entities will you choose to represent in your database?
-* What attributes will those entities have?
-* Why did you choose the types you did?
-* Why did you choose the constraints you did?
+- **Patients**: Attributes include `patient_id`, `name`, `age`, `gender`, `contact_number`, etc.
+- **Doctors**: Attributes include `doctor_id`, `name`, `specialization`, `contact_number`, etc.
+- **Appointments**: Attributes include `appointment_id`, `patient_id`, `doctor_id`, `appointment_date`, `purpose`, etc.
+- **Medical Records**: Attributes include `record_id`, `patient_id`, `doctor_id`, `diagnosis`, `prescription`, etc.
+- **Departments**: Attributes include `department_id`, `name`, `location`, etc.
 
 ### Relationships
 
-In this section you should include your entity relationship diagram and describe the relationships between the entities in your database.
+The Entity Relationship Diagram (ERD) illustrating relationships between entities:
+
+![Entity Relationship Diagram](Link_to_ERD_Image)
+
+Explanation of relationships:
+- Each patient can have multiple medical records and appointments.
+- Doctors can have multiple appointments and medical records associated with them.
+- Appointments are linked to specific patients and doctors.
+- Medical records are associated with patients and doctors.
 
 ## Optimizations
 
