@@ -1,4 +1,21 @@
 -- In this SQL file, write (and comment!) the typical SQL queries users will run on your database
+-- Add a new patient based on the first select statement
+INSERT INTO patients (name, age, gender, contact_number)
+VALUES ('John Doe', 45, 'Male', '555-555-5555');
+
+-- Add a new doctor based on the second select statement
+INSERT INTO doctors (name, specialization, contact_number)
+VALUES ('Dr. Smith', 'Pediatrics', '666-666-6666');
+
+-- Add a new medical record for the specific patient based on the third select statement
+INSERT INTO medical_records (patient_id, doctor_id, diagnosis, prescription)
+VALUES (
+    (SELECT patient_id FROM patients WHERE name = 'Jane Smith'),
+    (SELECT doctor_id FROM doctors WHERE name = 'Dr. Brown'),
+    'Diagnosis details here',
+    'Prescription details here'
+);
+
 -- Find all appointments for a specific patient given their name
 SELECT *
 FROM appointments AS a
