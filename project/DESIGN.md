@@ -2,7 +2,7 @@
 
 By YOUR NAME HERE
 
-Video overview: [Insert URL Here]
+Video overview: [https://youtu.be/c3MODmavPLQ]
 
 ## Scope
 
