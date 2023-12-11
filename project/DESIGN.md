@@ -1,6 +1,6 @@
 # Design Document
 
-By YOUR NAME HERE
+By RAI HARSH SANJAY 
 
 Video overview: [https://youtu.be/c3MODmavPLQ]
 
